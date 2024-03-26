@@ -76,7 +76,12 @@ header h1, header h6 {
 }
 
 #gallery {
-  margin-top: 50px;
+  margin: 50px auto 0 auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 17px;
+  row-gap: 17px;
+  width: 880px;
 }
 
 .card {
@@ -112,4 +117,15 @@ header h1, header h6 {
   background-position: center;
   background-color: #ffffff;
   border: 0;
+}
+
+footer {
+  margin-top: 66px;
+  height: 66px;
+}
+
+footer p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #545454;
 }
