@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0 200px;
   color: white;
+  font-family: Inter;
 }
 
 header {
@@ -67,4 +68,48 @@ header h1, header h6 {
   background-image: url(./images/add.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+
+#profile_edit_button:hover, #profile_add_image_button:hover {
+  opacity: 60%;
+  cursor: pointer;
+}
+
+#gallery {
+  margin-top: 50px;
+}
+
+.card {
+  width: 282px;
+  height: 362px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.card_image {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0 0;
+}
+
+.card_description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
+.card_text {
+  margin: 0;
+  color: black;
+  width: 222px;
+}
+
+.card_like_button {
+  width: 20px;
+  height: 18px;
+  background-image: url(./images/heart.svg);
+  background-position: center;
+  background-color: #ffffff;
+  border: 0;
 }
