@@ -1,10 +1,10 @@
 const imgList = [
   { src: './images/marco_zero.jpg', imgName: 'Marco Zero' },
-  { src: '', imgName: '' },
-  { src: '', imgName: '' },
-  { src: '', imgName: '' },
-  { src: '', imgName: '' },
-  { src: '', imgName: '' }
+  { src: './images/olinda.png', imgName: 'Olinda' },
+  { src: './images/boa_viagem.png', imgName: 'Boa Viagem' },
+  { src: './images/festa_junina.png', imgName: 'Festa Junina' },
+  { src: './images/recife_antigo.png', imgName: 'Recife Antigo' },
+  { src: './images/galo_da_madrugada.png', imgName: 'Galo da Madrugada' }
 ]
 
 function createEleWClass(e, className) {
