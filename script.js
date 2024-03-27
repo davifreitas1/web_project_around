@@ -41,4 +41,23 @@ function createInitialCards(imgList) {
   }
 }
 
-createInitialCards(imgList)
+createInitialCards(imgList);
+
+function addPopupVisible() {
+  const popup = document.querySelector('.popup');
+
+  if (!popup.classList.toString().includes('popup_visible')) {
+    popup.classList.add('popup_visible');
+  }
+}
+
+function removePopupVisible() {
+  const popup = document.querySelector('.popup');
+
+  if (popup.classList.toString().includes('popup_visible')) {
+    popup.classList.remove('popup_visible');
+  }
+}
+
+document.getElementById('profile_edit_button').addEventListener('click', addPopupVisible);
+document.getElementById('close_edit_win_button').addEventListener('click', removePopupVisible);
