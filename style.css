@@ -151,13 +151,56 @@ footer p {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 430px;
-  height: 330px;
+  width: 358px;
+  height: 258px;
   background-color: #ffffff;
   color: #000000;
   border-radius: 10px;
+  padding: 36px;
 }
 
 #close_edit_win_button {
-  position: relative;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: -40px;
+  left: 430px;
+  background-image: url(./images/close-icon.svg);
+  background-color: transparent;
+  background-position: center;
+  border: 0;
+  cursor: pointer;
+}
+
+#edit_profile_title {
+  margin: 0 0 54px 0;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.edit_input {
+  width: 100%;
+  height: 20px;
+  border: 0;
+  border-bottom: 1px solid #545454;
+}
+
+#edit_name {
+  margin-bottom: 30px;
+}
+
+#edit_role {
+  margin-bottom: 48px;
+}
+
+#save_edit_button {
+  width: 100%;
+  height: 50px;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
 }
