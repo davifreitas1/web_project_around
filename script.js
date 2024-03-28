@@ -61,3 +61,17 @@ function removePopupVisible() {
 
 document.getElementById('profile_edit_button').addEventListener('click', addPopupVisible);
 document.getElementById('close_edit_win_button').addEventListener('click', removePopupVisible);
+
+function changeNameAndRole() {
+  const inputName = document.getElementById('edit_name');
+  const inputRole = document.getElementById('edit_role');
+  const profileName = document.getElementById('profile_name');
+  const profileRole = document.getElementById('profile_role');
+
+  profileName.innerText = inputName.value;
+  profileRole.innerText = inputRole.value;
+
+  removePopupVisible();
+}
+
+document.getElementById('save_edit_button').addEventListener('click', changeNameAndRole);

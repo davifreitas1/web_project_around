@@ -24,7 +24,9 @@
           <span id="profile_name">Davi Freitas</span>
           <button id="profile_edit_button" type="button"></button>
         </div>
-        <span id="profile_role">Programador</span>
+        <div>
+          <span id="profile_role">Programador</span>
+        </div>
       </div>
 
       <button id="profile_add_image_button" type="button"></button>
@@ -42,15 +44,20 @@
 
   <div class="popup">
     <div id="edit_profile">
-      <button id="close_edit_win_button" type="button">Fechar Edição</button>
-      <p id="edit_profile_title">Edit Profile</p>
       <div>
-        <input id="edit_name" type="text">
+        <button id="close_edit_win_button" type="button"></button>
+        <p id="edit_profile_title">Edit Profile</p>
+      </div>
+      <div>
+        <input class="edit_input" id="edit_name" type="text" value="Davi Freitas">
         <span></span>
       </div>
       <div>
-        <input id="edit_role" type="text">
+        <input class="edit_input" id="edit_role" type="text" value="Programador">
         <span></span>
+      </div>
+      <div>
+        <button id="save_edit_button" type="button">Save</button>
       </div>
     </div>
   </div>
