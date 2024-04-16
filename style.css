@@ -108,6 +108,9 @@ header h1, header h6 {
   margin: 0;
   color: black;
   width: 222px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .card_like_button {
@@ -144,7 +147,7 @@ footer p {
   visibility: visible;
 }
 
-#edit_profile {
+.popup_box {
   position: absolute;
   top: 195px;
   left: 0;
@@ -159,7 +162,7 @@ footer p {
   padding: 36px;
 }
 
-#close_edit_win_button {
+.close_win_button {
   position: absolute;
   width: 40px;
   height: 40px;
