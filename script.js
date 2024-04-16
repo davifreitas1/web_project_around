@@ -49,6 +49,8 @@ function addPopupVisible(event) {
   let popupNumber;
   if (event.target.id === 'profile_edit_button') {
     popupNumber = 0;
+  } else if (event.target.id === 'profile_add_image_button') {
+    popupNumber = 1;
   }
   popup[popupNumber].classList.add('popup_visible');
 }
@@ -72,6 +74,7 @@ function changeNameAndRole() {
 
 createInitialCards(imgList);
 document.getElementById('profile_edit_button').addEventListener('click', addPopupVisible);
+document.getElementById('profile_add_image_button').addEventListener('click', addPopupVisible);
 document.querySelectorAll('.close_win_button').forEach((button) => {
   button.addEventListener('click', removePopupVisible);
 });
