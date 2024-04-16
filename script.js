@@ -39,8 +39,8 @@ function createInitialCards(imgList) {
   const gallery = document.getElementById('gallery');
 
   imgList.forEach((img) => {
-    const cardDiv = createCard(img);
-    gallery.appendChild(cardDiv);
+    const card = createCard(img);
+    gallery.appendChild(card);
   });
 }
 
@@ -72,6 +72,16 @@ function changeNameAndRole() {
   removePopupVisible();
 }
 
+function addNewImage() {
+  const imgInputName = document.getElementById('img_name').value;
+  const imgInputLink = document.getElementById('img_link').value;
+  const card = createCard({src: imgInputLink, imgName: imgInputName});
+
+  const gallery = document.getElementById('gallery');
+  gallery.appendChild(card);
+  removePopupVisible();
+}
+
 createInitialCards(imgList);
 document.getElementById('profile_edit_button').addEventListener('click', addPopupVisible);
 document.getElementById('profile_add_image_button').addEventListener('click', addPopupVisible);
@@ -79,3 +89,4 @@ document.querySelectorAll('.close_win_button').forEach((button) => {
   button.addEventListener('click', removePopupVisible);
 });
 document.getElementById('save_edit_button').addEventListener('click', changeNameAndRole);
+document.getElementById('save_add_image').addEventListener('click', addNewImage);

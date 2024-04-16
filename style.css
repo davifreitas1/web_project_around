@@ -188,11 +188,11 @@ footer p {
   border-bottom: 1px solid #545454;
 }
 
-#edit_name {
+#edit_name, #img_name {
   margin-bottom: 30px;
 }
 
-#edit_role {
+#edit_role, #img_link {
   margin-bottom: 48px;
 }
 
