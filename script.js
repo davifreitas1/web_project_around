@@ -14,53 +14,49 @@ function createEleWClass(e, className) {
   return element;
 }
 
+function createCard(img) {
+  const cardDiv = createEleWClass('div', 'card');
+  const cardImg = createEleWClass('div', 'card_image');
+  cardImg.style.backgroundImage = `url(${img.src})`;
+
+  const cardDesc = createEleWClass('div', 'card_description');
+
+  const h2 = createEleWClass('h2', 'card_text');
+  h2.innerText = img.imgName;
+
+  const likeButton =  createEleWClass('button', 'card_like_button');
+
+  cardDiv.appendChild(cardImg);
+
+  cardDesc.appendChild(h2);
+  cardDesc.appendChild(likeButton);
+
+  cardDiv.appendChild(cardDesc);
+  return cardDiv
+}
+
 function createInitialCards(imgList) {
   const gallery = document.getElementById('gallery');
 
-  for (let index = 0; index < imgList.length; index++) {
-    const cardDiv = createEleWClass('div', 'card');
-
-    const cardImg = createEleWClass('div', 'card_image');
-    cardImg.style.backgroundImage = `url(${imgList[index].src})`;
-  
-    const cardDesc = createEleWClass('div', 'card_description');
-
-    const h2 = createEleWClass('h2', 'card_text');
-    h2.innerText = imgList[index].imgName;
-
-    const likeButton =  createEleWClass('button', 'card_like_button');
-  
-    cardDiv.appendChild(cardImg);
-  
-    cardDesc.appendChild(h2);
-    cardDesc.appendChild(likeButton);
-  
-    cardDiv.appendChild(cardDesc);
-  
+  imgList.forEach((img) => {
+    const cardDiv = createCard(img);
     gallery.appendChild(cardDiv);
-  }
+  });
 }
 
-createInitialCards(imgList);
-
-function addPopupVisible() {
-  const popup = document.querySelector('.popup');
-
-  if (!popup.classList.toString().includes('popup_visible')) {
-    popup.classList.add('popup_visible');
+function addPopupVisible(event) {
+  const popup = document.querySelectorAll('.popup');
+  let popupNumber;
+  if (event.target.id === 'profile_edit_button') {
+    popupNumber = 0;
   }
+  popup[popupNumber].classList.add('popup_visible');
 }
 
 function removePopupVisible() {
-  const popup = document.querySelector('.popup');
-
-  if (popup.classList.toString().includes('popup_visible')) {
-    popup.classList.remove('popup_visible');
-  }
+  const popup = document.querySelector('.popup_visible');
+  popup.classList.remove('popup_visible');
 }
-
-document.getElementById('profile_edit_button').addEventListener('click', addPopupVisible);
-document.getElementById('close_edit_win_button').addEventListener('click', removePopupVisible);
 
 function changeNameAndRole() {
   const inputName = document.getElementById('edit_name');
@@ -74,4 +70,9 @@ function changeNameAndRole() {
   removePopupVisible();
 }
 
+createInitialCards(imgList);
+document.getElementById('profile_edit_button').addEventListener('click', addPopupVisible);
+document.querySelectorAll('.close_win_button').forEach((button) => {
+  button.addEventListener('click', removePopupVisible);
+});
 document.getElementById('save_edit_button').addEventListener('click', changeNameAndRole);
