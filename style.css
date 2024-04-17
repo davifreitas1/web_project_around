@@ -133,6 +133,11 @@ header h1, header h6 {
   background-position: center;
   background-color: #ffffff;
   border: 0;
+  cursor: pointer;
+}
+
+.card_liked_button {
+  background-image: url(./images/heart-black.svg);
 }
 
 footer {

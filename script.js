@@ -18,6 +18,14 @@ function deleteImage(event) {
   event.target.parentNode.remove();
 }
 
+function changeLike(event) {
+  if (event.target.classList.contains('card_liked_button')) {
+    event.target.classList.remove('card_liked_button');
+  } else {
+    event.target.classList.add('card_liked_button');
+  }
+}
+
 function createCard(img) {
   const cardDiv = createEleWClass('div', 'card');
   const cardImg = createEleWClass('div', 'card_image');
@@ -33,6 +41,7 @@ function createCard(img) {
   h2.innerText = img.imgName;
 
   const likeButton =  createEleWClass('button', 'card_like_button');
+  likeButton.addEventListener('click', changeLike);
 
   cardDiv.appendChild(delButton);
   cardDiv.appendChild(cardImg);
