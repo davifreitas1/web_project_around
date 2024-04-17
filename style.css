@@ -91,6 +91,17 @@ header h1, header h6 {
   border-radius: 10px;
 }
 
+.img_del_button {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background-color: transparent;
+  margin-left: 260px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
 .card_image {
   width: 282px;
   height: 282px;

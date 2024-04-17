@@ -14,10 +14,18 @@ function createEleWClass(e, className) {
   return element;
 }
 
+function deleteImage(event) {
+  event.target.parentNode.remove();
+}
+
 function createCard(img) {
   const cardDiv = createEleWClass('div', 'card');
   const cardImg = createEleWClass('div', 'card_image');
   cardImg.style.backgroundImage = `url(${img.src})`;
+
+  const delButton = createEleWClass('button', 'img_del_button');
+  delButton.style.backgroundImage= 'url(./images/trash-can.svg)';
+  delButton.addEventListener('click', deleteImage);
 
   const cardDesc = createEleWClass('div', 'card_description');
 
@@ -26,6 +34,7 @@ function createCard(img) {
 
   const likeButton =  createEleWClass('button', 'card_like_button');
 
+  cardDiv.appendChild(delButton);
   cardDiv.appendChild(cardImg);
 
   cardDesc.appendChild(h2);
