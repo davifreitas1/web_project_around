@@ -180,6 +180,20 @@ footer p {
   padding: 36px;
 }
 
+#popup_image {
+  position: absolute;
+  top: 195px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 358px;
+  height: 258px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .close_win_button {
   position: absolute;
   width: 40px;

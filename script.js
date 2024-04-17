@@ -26,13 +26,20 @@ function changeLike(event) {
   }
 }
 
+function expandImg(event) {
+  const popupImage = document.getElementById('popup_image');
+  popupImage.parentNode.classList.add('popup_visible');
+  popupImage.style.backgroundImage = event.target.style.backgroundImage;
+}
+
 function createCard(img) {
   const cardDiv = createEleWClass('div', 'card');
   const cardImg = createEleWClass('div', 'card_image');
   cardImg.style.backgroundImage = `url(${img.src})`;
+  cardImg.addEventListener('click', expandImg);
 
   const delButton = createEleWClass('button', 'img_del_button');
-  delButton.style.backgroundImage= 'url(./images/trash-can.svg)';
+  delButton.style.backgroundImage = 'url(./images/trash-can.svg)';
   delButton.addEventListener('click', deleteImage);
 
   const cardDesc = createEleWClass('div', 'card_description');
